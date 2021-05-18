@@ -634,6 +634,11 @@ acorn@^8.0.3:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.2.2.tgz#c4574e4fea298d6e6ed4b85ab844b06dd59f26d6"
   integrity sha512-VrMS8kxT0e7J1EX0p6rI/E0FbfOVcvBpbIqHThFv+f8YrZIlMfVotYcXKVPmTvPW8sW5miJzfUFrrvthUZg8VQ==
 
+add@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
+  integrity sha1-JI8Kn25aUo7yKV2+7DBTITCuIjU=
+
 aggregate-error@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/aggregate-error/-/aggregate-error-3.1.0.tgz#92670ff50f5359bdb7a3e0d40d0ec30c5737687a"
@@ -908,6 +913,13 @@ btoa-lite@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/btoa-lite/-/btoa-lite-1.0.0.tgz#337766da15801210fdd956c22e9c6891ab9d0337"
   integrity sha1-M3dm2hWAEhD92VbCLpxokaudAzc=
+
+bucket@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/bucket/-/bucket-0.0.1.tgz#d09ac2c33052dd23d68cc7029f11d076a0c4f362"
+  integrity sha1-0JrCwzBS3SPWjMcCnxHQdqDE82I=
+  dependencies:
+    xml2js "0.1.10"
 
 buffer-equal-constant-time@1.0.1:
   version "1.0.1"
@@ -1771,6 +1783,11 @@ inherits@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
   integrity sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
+
+install@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/install/-/install-0.13.0.tgz#6af6e9da9dd0987de2ab420f78e60d9c17260776"
+  integrity sha512-zDml/jzr2PKU9I8J/xyZBQn8rPCAY//UOYNmR01XwNwyfhEWObo2SWfSl1+0tm1u6PhxLwDnfsT/6jB7OUxqFA==
 
 is-arguments@^1.0.4:
   version "1.1.0"
@@ -2824,7 +2841,7 @@ sass@^1.32.11:
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
 
-sax@>=0.6.0:
+sax@>=0.1.1, sax@>=0.6.0:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
@@ -2845,6 +2862,15 @@ schema-utils@^3.0.0:
     "@types/json-schema" "^7.0.6"
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
+
+"scoop-stripe-cli@https://github.com/stripe/scoop-stripe-cli.git":
+  version "0.0.0"
+  resolved "https://github.com/stripe/scoop-stripe-cli.git#387ef0ea4a8ae67d7b1610cd7947c7fe5e85b977"
+
+scoop@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/scoop/-/scoop-0.0.2.tgz#e3adc711c62a8da734dc8634d0bf8bb469b242d7"
+  integrity sha1-463HEcYqjac03IY00L+LtGmyQtc=
 
 semver@^5.1.0, semver@^5.6.0:
   version "5.7.1"
@@ -3452,6 +3478,13 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+
+xml2js@0.1.10:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.1.10.tgz#f904e6105a7fc617acf0b7a58ef5aff93745dbae"
+  integrity sha1-+QTmEFp/xhes8LeljvWv+TdF264=
+  dependencies:
+    sax ">=0.1.1"
 
 xml2js@^0.4.23:
   version "0.4.23"
