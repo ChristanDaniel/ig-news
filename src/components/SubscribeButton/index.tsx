@@ -1,4 +1,4 @@
-import { session, signIn, useSession } from 'next-auth/client';
+import { signIn, useSession } from 'next-auth/client';
 import { api } from '../../services/api';
 import styles from './styles.module.scss';
 import { getStripeJs } from '../../services/stripe-js'

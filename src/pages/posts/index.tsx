@@ -47,12 +47,12 @@ export const getStaticProps: GetStaticProps = async () => {
     const prismic = getPrismicClient()
 
     const response = await prismic.query([
-        Prismic.predicates.at('document.type','post')
+        Prismic.predicates.at('document.type', 'post')
     ], {
         fetch: ['post.title', 'post.content'],
         pageSize: 100,
     })
-// console.log(JSON.stringify(response,null,2))
+  console.log(JSON.stringify(response,null,2))
 
     const posts = response.results.map(post => {
         return {
@@ -62,8 +62,8 @@ export const getStaticProps: GetStaticProps = async () => {
             updateAt: new Date(post.last_publication_date).toLocaleDateString('pt-BR', {
                 day: '2-digit',
                 month: 'long',
-                year: 'numeric'
-            })
+                year: 'numeric',
+            }),
         }
     })
 
