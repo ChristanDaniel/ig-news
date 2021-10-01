@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { Header } from '.'
+import { SignInButton } from '.'
 
 jest.mock('next/dist/client/router', () => {
     return {
@@ -19,10 +19,10 @@ jest.mock('next-auth/client', () => {
     }
 })
 
-describe('Header Component', () => {
+describe('SignInButton Component', () => {
     test('renders correctly', () => {
         render(
-            <Header />
+            <SignInButton />
         )
     
         expect(screen.getByText('Home')).toBeInTheDocument()
