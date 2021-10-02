@@ -20,4 +20,50 @@ describe('SubscribeButton Component', () => {
         expect(screen.getByText('Subscribe now')).toBeInTheDocument()
     })
 
+    it('redorects iser tp sign in when not authenticated', () => {
+        const signInMocked = mocked(signIn)
+
+        const useSessionMocked = mocked(useSession)
+        useSessionMocked.mockReturnValueOnce([null, false])
+
+        render(<SubscribeButton />)
+
+        const subscribeButton = screen.getByText('Subscribe now');
+
+        fireEvent.click(subscribeButton)
+
+        expect(signInMocked).toHaveBeenCalled()
+    });
+
+    it('Redirects to posts when user already has a subscription', () => {
+        const useRouterMocked = mocked(useRouter)
+        const useSessionMocked = mocked(useSession)
+        const pushMock = jest.fn()
+
+        useSessionMocked.mockReturnValueOnce([
+            { 
+                user: { 
+                    name: 'John doe',
+                    email: 'john.doe@example.com'
+                }, 
+                activeSubscription: 'fake-active-subscriction',
+                expires: 'fake-expires'
+            },
+                false
+        ])
+
+        useRouterMocked.mockReturnValueOnce({
+            push: pushMock
+        } as any)
+
+        render(<SubscribeButton />)
+
+        const subscribeButton = screen.getByText('Subscribe now');
+
+        fireEvent.click(subscribeButton)
+
+        expect(pushMock).toHaveBeenLastCalledWith('/posts')
+
+    })
+
 })
