@@ -1,5 +1,7 @@
 import { render, screen } from '@testing-library/react'
+import { mocked } from 'ts-jest/utils'
 import Home from '../pages/index'
+import { stripe } from '../services/stripe'
 
 jest.mock('next/router')
 jest.mock('next-auth/client', () => {
@@ -8,12 +10,18 @@ jest.mock('next-auth/client', () => {
     }
 })
 
+jest.mock('../../services/stripe')
+
 describe('Home page', () => {
 
     it('renders correctly', () => {
 
         render(<Home product={{ priceId: 'fake-price-id', amount: 'R$10,00'}} />)
         expect(screen.getByText("for R$10,00 month")).toBeInTheDocument()
+    })
+
+    it('loads initial data', async() => {
+        const retriveStripePricesMocked = mocked(stripe.prices.retrieve)
     })
 
 })
