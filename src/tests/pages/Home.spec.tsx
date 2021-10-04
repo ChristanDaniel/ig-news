@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { mocked } from 'ts-jest/utils'
-import Home, { getStaticProps } from '../pages/index'
-import { stripe } from '../services/stripe'
+import Home, { getStaticProps } from '../../pages/index'
+import { stripe } from '../../services/stripe'
 
 jest.mock('next/router')
 jest.mock('next-auth/client', () => {
@@ -10,7 +10,7 @@ jest.mock('next-auth/client', () => {
     }
 })
 
-jest.mock('../services/stripe')
+jest.mock('../../services/stripe')
 
 describe('Home page', () => {
 
